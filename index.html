@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler Phase Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Compiler Phase Simulator</h1>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('lexical')">Lexical Analysis</button>
+            <button class="tab-btn" onclick="openTab('syntax')">Syntax Analysis</button>
+        </div>
+        
+        <div id="lexical" class="tab-content active">
+            <h2>Lexical Analysis</h2>
+            <textarea id="input-code" placeholder="Enter your code here..."></textarea>
+            <button onclick="analyzeLexically()">Analyze Lexically</button>
+            <div id="lexical-output" class="output"></div>
+        </div>
+        
+        <div id="syntax" class="tab-content">
+            <h2>Syntax Analysis</h2>
+            <textarea id="syntax-input" placeholder="Enter your code here..."></textarea>
+            <button onclick="analyzeSyntactically()">Analyze Syntactically</button>
+            <div id="syntax-output" class="output"></div>
+            <div id="parse-tree" class="tree"></div>
+        </div>
+    </div>
+
+    <script src="lexer.js"></script>
+    <script src="parser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
